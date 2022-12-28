@@ -14,9 +14,9 @@ const Home = () => {
   ];
   return (
     <>
-      <div className="min-h-full overflow-hidden flex grow bg-slate-50">
+      <div className="min-h-screen overflow-hidden flex grow bg-slate-50">
         {/* sidebar */}
-        <div className="sidebar print:hidden">
+        <div className="sidebar fixed print:hidden">
           <div className="main-sidebar">
             <div className="flex h-screen w-24 flex-col border-r-2 bg-white">
               <div class="flex pt-6 px-6 ">
@@ -233,13 +233,13 @@ const Home = () => {
         {/* sidebar */}
 
         {/* nav */}
-        <nav className="header w-0">
-          <div className="header-container relative flex w-screen h-20  bg-white ">
+        <nav className="header fixed w-0">
+          <div className="header-container relative  flex w-screen h-20 left-24  bg-white ">
             {/* check sidebar */}
             <div
               className={`${
                 open ? "w-60" : "w-0"
-              } hidden sm:block relative h-screen duration-500 bg-white `}
+              } hidden sm:block relative h-screen  duration-500 bg-white `}
             >
               <RxHamburgerMenu
                 className={`absolute text-3xl -mr-6 bg-white rounded-full cursor-pointer top-6 ${
@@ -247,7 +247,7 @@ const Home = () => {
                 }`}
                 onClick={() => setOpen(!open)}
               />
-              <ul className="pt-20">
+              <ul className="pt-20 ">
                 {Menus.map((menu, index) => (
                   <a href={menu.path} key={index}>
                     <li
@@ -272,7 +272,7 @@ const Home = () => {
         </nav>
         {/* nav */}
 
-        <main className="main-content w-full px-[var(--margin-x)] pb-8 pt-24 px-24">
+        <main className="main-content w-screen px-[var(--margin-x)] pb-8 pt-24 pr-24 pl-40">
           <div className=" text-xl font-medium text-slate-800 flex  justify-between">
             <h1>Compign overview</h1>
             <h1>Last 30 days</h1>
