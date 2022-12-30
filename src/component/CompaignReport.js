@@ -19,7 +19,7 @@ const CompaignReport = () => {
           return (
             <div
               key={index}
-              className={`basis-1/2  space-y-4 border-t-4 md:border-l-4 ${item.color} py-4`}
+              className={`basis-1/2  space-y-4 border-t-4 md:border-t-0 md:border-l-4 ${item.color} py-4`}
             >
               <h1 className="text-base font-medium text-slate-700">
                 {item.title}

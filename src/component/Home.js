@@ -276,13 +276,13 @@ const Home = () => {
         </nav>
         {/* nav */}
 
-        <main className="main-content w-screen px-[var(--margin-x)] pb-8 pt-24 pr-12 md:pr-24 pl-40">
-          <div className=" text-xl font-medium text-slate-800 flex  justify-between">
-            <h1>Compign overview</h1>
+        <main className="main-content w-screen px-[var(--margin-x)] pb-8 pt-24 pr-12 lg:pr-24 pl-32 lg:pl-40">
+          <div className=" text-xl font-medium text-slate-800 sm:flex  justify-between">
+            <h1 className="pb-2 sm:pb-0">Compign overview</h1>
             <h1>Last 30 days</h1>
           </div>
           <div class="flex flex-col md:flex-row mt-6 text-center bg-white rounded-md cursor-pointer shadow-md ">
-            <div className=" basis-1/2 space-y-4 border-t-4 md:border-l-4 border-blue-500 py-4">
+            <div className=" basis-1/2 space-y-4 border-t-4 md:border-t-0 md:border-l-4 border-blue-500 py-4">
               <h1 className="text-base font-medium text-slate-700">
                 Total Subscriber
               </h1>
@@ -295,7 +295,7 @@ const Home = () => {
                 <h1 className="text-base font-medium pt-2">Details</h1>
               </div>
             </div>
-            <div className=" basis-1/2 space-y-4 border-t-4 md:border-l-4  border-pink-500 py-4">
+            <div className=" basis-1/2 space-y-4 border-t-4 md:border-t-0 md:border-l-4  border-pink-500 py-4">
               <h1 className="text-base font-medium text-slate-700">
                 Avg. open Rate
               </h1>
@@ -308,7 +308,7 @@ const Home = () => {
                 <h1 className="text-base font-medium pt-2">Details</h1>
               </div>
             </div>
-            <div className=" basis-1/2 space-y-4 py-4 border-t-4 md:border-l-4  border-orange-500  ">
+            <div className=" basis-1/2 space-y-4 py-4 border-t-4 md:border-t-0 md:border-l-4  border-orange-500  ">
               <h1 className="text-base font-medium text-slate-700">
                 Avg. click Rate
               </h1>
@@ -324,8 +324,8 @@ const Home = () => {
           </div>
 
           {/* top campign */}
-          <div className=" text-xl font-medium text-slate-800 flex mt-16  justify-between">
-            <h1> Top Compaign overview</h1>
+          <div className=" text-xl font-medium text-slate-800 sm:flex mt-16  justify-between">
+            <h1> Top Compaign Overview</h1>
             <h1>28,Dec 2022</h1>
           </div>
           {/* top campign */}

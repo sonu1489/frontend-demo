@@ -5,7 +5,7 @@ const Table = () => {
     <div className="flex flex-col mt-6 ">
       <div className="overflow-x-auto">
         <div className="p-1.5 w-full inline-block align-middle">
-          <div className="overflow-hidden border rounded-lg">
+          <div className=" border rounded-lg">
             <table className="min-w-full divide-y divide-gray-200 shadow-md">
               <thead className="bg-gray-200">
                 <tr>
