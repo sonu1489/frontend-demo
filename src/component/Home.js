@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { BiEnvelopeOpen } from "react-icons/bi";
+import CompaignReport from "./CompaignReport";
+import CountryList from "./CountryList";
+import MoreDetails from "./MoreDetails";
+import Status from "./Status";
+import Table from "./Table";
 const Home = () => {
   const [open, setOpen] = useState(false);
 
@@ -272,13 +276,13 @@ const Home = () => {
         </nav>
         {/* nav */}
 
-        <main className="main-content w-screen px-[var(--margin-x)] pb-8 pt-24 pr-24 pl-40">
+        <main className="main-content w-screen px-[var(--margin-x)] pb-8 pt-24 pr-12 md:pr-24 pl-40">
           <div className=" text-xl font-medium text-slate-800 flex  justify-between">
             <h1>Compign overview</h1>
             <h1>Last 30 days</h1>
           </div>
-          <div class="flex flex-row mt-6 text-center bg-white rounded-md cursor-pointer shadow-md ">
-            <div className=" basis-1/2 space-y-4 border-l-4 border-blue-500 py-4">
+          <div class="flex flex-col md:flex-row mt-6 text-center bg-white rounded-md cursor-pointer shadow-md ">
+            <div className=" basis-1/2 space-y-4 border-t-4 md:border-l-4 border-blue-500 py-4">
               <h1 className="text-base font-medium text-slate-700">
                 Total Subscriber
               </h1>
@@ -291,7 +295,7 @@ const Home = () => {
                 <h1 className="text-base font-medium pt-2">Details</h1>
               </div>
             </div>
-            <div className=" basis-1/2 space-y-4 border-l-4 border-pink-500 py-4">
+            <div className=" basis-1/2 space-y-4 border-t-4 md:border-l-4  border-pink-500 py-4">
               <h1 className="text-base font-medium text-slate-700">
                 Avg. open Rate
               </h1>
@@ -304,7 +308,7 @@ const Home = () => {
                 <h1 className="text-base font-medium pt-2">Details</h1>
               </div>
             </div>
-            <div className=" basis-1/2 space-y-4 py-4 border-l-4 border-orange-500  ">
+            <div className=" basis-1/2 space-y-4 py-4 border-t-4 md:border-l-4  border-orange-500  ">
               <h1 className="text-base font-medium text-slate-700">
                 Avg. click Rate
               </h1>
@@ -328,474 +332,29 @@ const Home = () => {
 
           {/* table */}
 
-          <div className="flex flex-col mt-6 ">
-            <div className="overflow-x-auto">
-              <div className="p-1.5 w-full inline-block align-middle">
-                <div className="overflow-hidden border rounded-lg">
-                  <table className="min-w-full divide-y divide-gray-200 shadow-md">
-                    <thead className="bg-gray-200">
-                      <tr>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                        >
-                          Compaigns
-                        </th>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                        >
-                          Recipicent
-                        </th>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
-                        >
-                          Sents
-                        </th>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                        >
-                          Open/Click
-                        </th>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
-                        >
-                          Action
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200 bg-white">
-                      <tr>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                          Example 1{" "}
-                          <span className=" ml-4 bg-gray-200 rounded-md px-2">
-                            Draft
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          Jone Doe
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          3 week ago
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-green-700 hover:text-green-700"
-                            href="/"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-red-500 hover:text-red-700"
-                            href="/"
-                          >
-                            Delete
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                          Example 2
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          Jone Doe
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          5 week ago
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-green-300 hover:text-green-700"
-                            href="/"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-red-500 hover:text-red-700"
-                            href="/"
-                          >
-                            Delete
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                          Eaxmple 3{" "}
-                          <span className=" ml-4 bg-red-200 rounded-md px-2">
-                            Fail
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          Jone Doe
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          6 week ago
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-green-500 hover:text-green-700"
-                            href="/"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-red-500 hover:text-red-700"
-                            href="/"
-                          >
-                            Delete
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                          Example 4{" "}
-                          <span className=" ml-4 bg-gray-200 rounded-md px-2">
-                            Draft
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          Mary Poppins
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                          a week ago
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-green-300 hover:text-green-700"
-                            href="/"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                        <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                          <a
-                            className="text-red-500 hover:text-red-700"
-                            href="/"
-                          >
-                            Delete
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Table />
           {/* table */}
 
           {/* compaign report */}
-          <div>
-            <h1 className="text-xl font-medium text-slate-800 mt-16">
-              Compaign Report for ( Compaign Name )
-            </h1>
 
-            <div class="flex flex-row mt-6 text-center bg-white rounded-md cursor-pointer shadow-md">
-              <div className=" basis-1/2 space-y-4 border-l-4 border-blue-500 py-4">
-                <h1 className="text-base font-medium text-slate-700">Open</h1>
-                <h1>14,112</h1>
-              </div>
-              <div className=" basis-1/2 space-y-4 border-l-4 border-green-500 py-4">
-                <h1 className="text-base font-medium text-slate-700">
-                  Clicked
-                </h1>
-                <h1>11</h1>
-              </div>
-              <div className=" basis-1/2 space-y-4 border-l-4 border-pink-500 py-4">
-                <h1 className="text-base font-medium text-slate-700">
-                  Bounced
-                </h1>
-                <h1>150</h1>
-              </div>
-              <div className=" basis-1/2 space-y-4 border-l-4 border-orange-500 py-4">
-                <h1 className="text-base font-medium text-slate-700">
-                  Unsubscribed
-                </h1>
-                <h1>5</h1>
-              </div>
-            </div>
-          </div>
+          <CompaignReport />
 
           {/* compaign report */}
 
           {/* status */}
-          <h1 className="text-xl font-medium text-slate-800 bg-white mt-16 pl-4 py-6">
-            Status & Numbers
-          </h1>
-          <div class="flex flex-row  text-start bg-white ">
-            <div className=" basis-1/2 space-y-4  py-4 pl-4 ">
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Delivery Rate
-                </h1>
-                <div>
-                  <h1>90%</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div
-                      className="bg-green-600 h-2.5 rounded-full"
-                      style={{ width: "90%" }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Bounced Rate
-                </h1>
-                <div>
-                  <h1>10%</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div
-                      className="bg-red-600 h-2.5 rounded-full"
-                      style={{ width: "10%" }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Unique Click
-                </h1>
-                <div>
-                  <h1>60%</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div
-                      className="bg-orange-500 h-2.5 rounded-full"
-                      style={{ width: "60%" }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Unique Open
-                </h1>
-                <div>
-                  <h1>20%</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div
-                      className="bg-orange-300 h-2.5 rounded-full"
-                      style={{ width: "25%" }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" basis-1/2 space-y-4 border-l-4 border-green-500 py-4 pl-4">
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Total Click
-                </h1>
-                <div>
-                  <h1 className="text-right">220</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div className="bg-blue-600 h-2.5 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Total Open
-                </h1>
-                <div>
-                  <h1 className="text-right">3210</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div className="bg-blue-600 h-2.5 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Unsubscrib
-                </h1>
-                <div>
-                  <h1 className="text-right">5</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div className="bg-blue-600 h-2.5 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Forwards
-                </h1>
-                <div>
-                  <h1 className="text-right">10</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div className="bg-blue-600 h-2.5 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Marked spam
-                </h1>
-                <div>
-                  <h1 className="text-right">0</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div className=" h-2.5 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-around">
-                <h1 className="text-base  font-medium text-slate-700">
-                  Unopened
-                </h1>
-                <div>
-                  <h1 className="text-right">200</h1>
-                  <div className="border-2  w-96 rounded-full">
-                    <div className="bg-blue-600 h-2.5 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <Status />
+
           {/* status */}
 
           {/* more details */}
-          <div>
-            <div>
-              <h1 className="text-xl font-medium text-slate-800 mt-16 mb-6">
-                More Deatils
-              </h1>
-            </div>
 
-            <div class="col-span-9 lg:col-span-6">
-              <div class="grid grid-cols-1 gap-3 sm:grid-cols-1 sm:gap-5 lg:grid-cols-1">
-                <div class="rounded-lg bg-white shadow-md p-4  ">
-                  <div class="flex justify-between space-x-1">
-                    <p class="text-xl my-1 font-semibold text-slate-700">
-                      Top Link
-                    </p>
-                    <div>
-                      <BiEnvelopeOpen className="w-9 h-9 hover:bg-gray-300 rounded-full p-1" />
-                    </div>
-                  </div>
-                </div>
-                <div class="rounded-lg bg-white shadow-md p-4 dark:bg-navy-700">
-                  <div class="flex justify-between">
-                    <p class="text-xl my-1 font-semibold text-slate-700 ">
-                      Unsubscribed
-                    </p>
-                    <div>
-                      <BiEnvelopeOpen className="w-9 h-9 hover:bg-gray-300 rounded-full p-1" />
-                    </div>
-                  </div>
-                </div>
-                <div class="rounded-lg bg-white shadow-md p-4 ">
-                  <div class="flex justify-between">
-                    <p class="text-xl my-1 font-semibold text-slate-700 ">
-                      Bounced Email
-                    </p>
-                    <div>
-                      <BiEnvelopeOpen className="w-9 h-9 hover:bg-gray-300 rounded-full p-1" />
-                    </div>
-                  </div>
-                </div>
-                <div class="rounded-lg bg-white shadow-md p-4 ">
-                  <div class="flex justify-between">
-                    <p class="text-xl my-1 font-semibold text-slate-700 ">
-                      Marked spam
-                    </p>
-                    <div>
-                      <BiEnvelopeOpen className="w-9 h-9 hover:bg-gray-300 rounded-full p-1" />
-                    </div>
-                  </div>
-                </div>
+          <MoreDetails />
 
-                <div class="rounded-lg bg-white shadow-md p-4 ">
-                  <div class="flex justify-between">
-                    <p class="text-xl my-1 font-semibold text-slate-700 ">
-                      Unopened
-                    </p>
-                    <div>
-                      <BiEnvelopeOpen className="w-9 h-9 hover:bg-gray-300 rounded-full p-1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           {/* more details */}
 
           {/* country-list */}
-          <div>
-            <h1 className="text-xl font-medium text-slate-800 mt-16 ">
-              Country List
-            </h1>
-            <div class="flex flex-row mt-6 text-center bg-white rounded-md cursor-pointer shadow-md">
-              <div className=" basis-1/2 space-y-4  py-4">
-                <div className=" flex justify-around  border-b-2 border-gray-200">
-                  <img
-                    className="w-40 h-32 mb-2 shadow-md rounded-md"
-                    src="/india.jpg"
-                    alt="india-flag"
-                  />
-                  <div>
-                    <h1 className="text-xl font-medium text-slate-600">
-                      population: <span className="text-lg">139.39 cr</span>
-                    </h1>
-                    <h1 className="text-xl font-medium text-slate-600">
-                      Literacy-rate: <span className="text-lg">94.08%</span>
-                    </h1>
-                    <h1 className="text-xl font-medium text-slate-600">
-                      neighbour country: <span className="text-lg"> 9</span>
-                    </h1>
-                  </div>
-                </div>
-                <h1 className="text-base border-b-2 border-gray-200 text-start pl-6 font-medium text-slate-700 pb-2">
-                  Singapur
-                </h1>
-                <h1 className="text-base text-start pl-6 font-medium text-slate-700">
-                  Bangladesh
-                </h1>
-              </div>
-              <div className=" basis-1/2 space-y-4 border-l-4 border-green-500 py-4">
-                <h1 className="text-base font-medium text-slate-700">Opened</h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Unopened
-                </h1>
-                <h1 className="text-base font-medium text-slate-700">spam</h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Unsubscribe
-                </h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Bounced
-                </h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Top Click
-                </h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Unique Click
-                </h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Unique Open
-                </h1>
-                <h1 className="text-base font-medium text-slate-700">
-                  Recipients
-                </h1>
-              </div>
-              <div className=" basis-1/2 space-y-4 border-l-4 border-pink-500 py-4">
-                <div>
-                  <div>
-                    <img src="/chart.jpg" className="w-96 h-32" alt="chart" />
-                  </div>
-                  <div>
-                    <img src="/global.jpg" className="w-96 h-60 mt-2" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CountryList />
           {/* country-list */}
         </main>
       </div>
